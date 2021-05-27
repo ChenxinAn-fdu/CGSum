@@ -84,8 +84,7 @@ python test_CGSum.py  --visible_gpu 0  --model_dir  save_models/CGSum_1hop  --mo
 ```
 
 To test our model , remember to replace the pyrouge root set in `data_util/utils.py` to your own path.
-you can also  download our trained model [Download](https://drive.google.com/file/d/13YoeNeQTLbsBIEuEIutACE55YI4wOVnm/view?usp=sharing)
-Our checkpoints can be found in [inductive 1hop](https://drive.google.com/file/d/1IFWhpbVe9aUwKmv2ChRgL_6LeVnjWA-H/view?usp=sharing), [inductive 2hop](https://drive.google.com/file/d/1bDT6kDUqelAS0evByQd0AGtPxyXbpfjH/view?usp=sharing), [transductive 1hop](https://drive.google.com/file/d/1CI7mk4NW0feMsqVkRUhCefEG7XpyqRK9/view?usp=sharing), [transductive 2hop](https://drive.google.com/file/d/1-KJa4OpXhB5263r0MOd8vQ95Hlr1ervG/view?usp=sharing)
+you can also  download our trained model to reproduce our results: [inductive 1hop](https://drive.google.com/file/d/1IFWhpbVe9aUwKmv2ChRgL_6LeVnjWA-H/view?usp=sharing), [inductive 2hop](https://drive.google.com/file/d/1bDT6kDUqelAS0evByQd0AGtPxyXbpfjH/view?usp=sharing), [transductive 1hop](https://drive.google.com/file/d/1CI7mk4NW0feMsqVkRUhCefEG7XpyqRK9/view?usp=sharing), [transductive 2hop](https://drive.google.com/file/d/1-KJa4OpXhB5263r0MOd8vQ95Hlr1ervG/view?usp=sharing)
 
 our dataset is retrieved from [S2ORC](https://github.com/allenai/s2orc), the implementation of BertSum can refer to [PreSumm](https://github.com/nlpyang/PreSumm), thanks for their works.
 
