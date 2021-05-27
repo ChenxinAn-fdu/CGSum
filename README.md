@@ -33,11 +33,11 @@ Our preprocessed datasets are chunked to 500 words, for full document you can re
 ### requirements for running our code
 
 - python 3.6+
-- [PyTorch](https://pytorch.org/) 1.1+
+- [PyTorch](https://pytorch.org/) 1.1
 - [DGL](http://dgl.ai) 0.4.3
 - [rouge](https://github.com/pltrdy/rouge) 1.0.0
 - [pyrouge](https://github.com/bheinzerling/pyrouge) 0.1.3
-- [fastNLP](https://github.com/fastnlp/fastNLP.git)
+- [fastNLP](https://github.com/fastnlp/fastNLP.git) 0.5.0+
 
 #### ROUGE Installation
 
