@@ -33,10 +33,11 @@ Our preprocessed datasets are chunked to 500 words, for full document you can re
 ### requirements for running our code
 
 - python 3.6+
-- [PyTorch](https://pytorch.org/) 1.1+
+- [PyTorch](https://pytorch.org/) 1.1
 - [DGL](http://dgl.ai) 0.4.3
 - [rouge](https://github.com/pltrdy/rouge) 1.0.0
 - [pyrouge](https://github.com/bheinzerling/pyrouge) 0.1.3
+- [fastNLP](https://github.com/fastnlp/fastNLP.git) 0.5.0+
 
 #### ROUGE Installation
 
@@ -67,19 +68,23 @@ you can train/test our model using the following command:
 * **training**
 
 ```python
-python train.py  --visible_gpu gpu_index  --model_dir  /path/to/save/checkpoints  --dataset_dir  path/to/dataset_directory --n_hop k
+python train_CGSum.py  --visible_gpu 0  --model_dir  save_models/CGSum_1hop  --dataset_dir  SSN/inductive --setting inductive --n_hop 1
+```
+```python
+python train_CGSum.py  --visible_gpu 0  --model_dir  save_models/CGSum_1hop  --dataset_dir  SSN/transductive --setting transductive --n_hop 1
 ```
 
 * **testing**
 
 ```python
-python test.py   --visible_gpu gpu_index  --model_dir  /path/to/checkpoints  --model_name selected_checkpoint  --decode_dir /path/to/save/generated_abstract  --result_dir /path/to/save/ROUGE --n_hop 1
+python test_CGSum.py  --visible_gpu 0  --model_dir  save_models/CGSum_1hop  --model_name CGSum_inductive_1hopNbrs.pt --setting inductive  --decode_dir decode_path  --result_dir results --n_hop 1  --min_dec_steps 130
+```
+```python
+python test_CGSum.py  --visible_gpu 0  --model_dir  save_models/CGSum_1hop  --model_name CGSum_transductive_1hopNbrs.pt --setting transductive  --decode_dir decode_path  --result_dir results --n_hop 1  --min_dec_steps 140
 ```
 
 To test our model , remember to replace the pyrouge root set in `data_util/utils.py` to your own path.
-you can also  download our trained model [Download](https://drive.google.com/file/d/13YoeNeQTLbsBIEuEIutACE55YI4wOVnm/view?usp=sharing)
+you can also  download our trained model to reproduce our results: [inductive 1hop](https://drive.google.com/file/d/1IFWhpbVe9aUwKmv2ChRgL_6LeVnjWA-H/view?usp=sharing), [inductive 2hop](https://drive.google.com/file/d/1bDT6kDUqelAS0evByQd0AGtPxyXbpfjH/view?usp=sharing), [transductive 1hop](https://drive.google.com/file/d/1CI7mk4NW0feMsqVkRUhCefEG7XpyqRK9/view?usp=sharing), [transductive 2hop](https://drive.google.com/file/d/1-KJa4OpXhB5263r0MOd8vQ95Hlr1ervG/view?usp=sharing)
 
 our dataset is retrieved from [S2ORC](https://github.com/allenai/s2orc), the implementation of BertSum can refer to [PreSumm](https://github.com/nlpyang/PreSumm), thanks for their works.
-
-
 
