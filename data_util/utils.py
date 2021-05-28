@@ -98,6 +98,7 @@ def pyrouge_score_all(hyps_list, refer_list, config, remap=True):
     r.model_filename_pattern = 'Model.[A-Z].#ID#.txt'
     ###### change this line to your pyrouge dir ######
     output = r.convert_and_evaluate(rouge_args="-e /path/to/your/ROUGE/RELEASE-1.5.5/data -a -m -n 2 -d")
+
     output_dict = r.output_to_dict(output)
 
     shutil.rmtree(PYROUGE_ROOT)

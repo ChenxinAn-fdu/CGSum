@@ -144,7 +144,6 @@ class Encoder(nn.Module):
         self.config = config
         self.embedding = nn.Embedding(config.vocab_size, config.emb_dim)
         init_wt_normal(config, self.embedding.weight)
-        init_wt_normal(config, self.embeddin.weight)
         self.join = nn.Linear(4 * config.hidden_dim, 2 * config.hidden_dim)
         init_linear_wt(config, self.join)
         self.lstm = LSTM(config.emb_dim, config.hidden_dim, num_layers=1, batch_first=True, bidirectional=True)

@@ -85,7 +85,7 @@ if __name__ == '__main__':
                         help="specifies the checkpoint, if it is None we will use the best cp in validation")
     parser.add_argument("--result_dir", default="results", help="path to the rouge score")
     parser.add_argument("--result_file_prefix", default=None, help="specifies the result file name")
-    parser.add_argument("--decode_path", default="decode_path", help="path to generated abstracts")
+    parser.add_argument("--decode_dir", default="decode_path", help="path to generated abstracts")
     parser.add_argument("--setting", default="inductive", choices=["transductive", "inductive"])
     args = parser.parse_args()
 
@@ -112,7 +112,7 @@ if __name__ == '__main__':
     config.train_path = args.dataset_dir if args.dataset_dir is not None else os.path.join("SSN", args.setting)
     config.vocab_path = os.path.join(config.train_path, args.vocab_file)
     config.model_path = args.model_dir
-    config.decode_path = args.decode_path
+    config.decode_path = args.decode_dir
 
     # add beam search config
     config.beam_size = args.beam_size
