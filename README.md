@@ -28,7 +28,10 @@ You can download our preprocessed dataset which can be directly loaded by `datal
 Note that we divide the dataset in two ways. The transductive division indicates that most neighbors of papers in test set are from the training set, but considering that in real cases, the test papers may from a new graph which has nothing to do with papers we used for training, thus we introduce SNN (inductive), by splitting the whole citation graph into three independent subgraphs – training, validation and test graphs.
 Our preprocessed datasets are chunked to 500 words, for full document you can retrieve them from the whole dataset by `paper_id`
 
- 
+你也可以通过百度云下载我们的数据集 [SSN完整数据集和引用关系](https://pan.baidu.com/s/10L583aottZcCD8WK7kqD8g) 提取码 v4u8
+SSN [inductive](https://pan.baidu.com/s/1kUnn3VBTrILubIyFyC4bbA) 提取码 gk4j
+SSN [transductive](https://pan.baidu.com/s/1JBqlX6gmOerI1xaW2RSgiA) 提取码 17kw
+
 ### requirements for running our code
 
 - python 3.6+
