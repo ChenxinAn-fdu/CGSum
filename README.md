@@ -24,8 +24,7 @@ example of our dataset:
 }
 ...
 ```
-You can download our preprocessed dataset which can be directly loaded by `dataloader.py` via [SSN (inductive)](https://drive.google.com/file/d/1gxIniiwPHP53DEKdMMAJyHxM11Ib7dEd/view?usp=sharing
-) and [SSN (transductive)](https://drive.google.com/file/d/14VSS1n1mo9irNhtDT1qvHA2JChKetaNh/view?usp=sharing). 
+You can download our preprocessed dataset which can be directly loaded by `dataloader.py` via [SSN (inductive)](https://drive.google.com/file/d/1GJOkm3iQf7kBxme1ZFuwYPeTV3J8QV17/view?usp=sharing) and [SSN (transductive)](https://drive.google.com/file/d/1SdrWHoDRU0-P21b4LM42SwFt8zx3d4F2/view?usp=sharing). 
 Note that we divide the dataset in two ways. The transductive division indicates that most neighbors of papers in test set are from the training set, but considering that in real cases, the test papers may from a new graph which has nothing to do with papers we used for training, thus we introduce SNN (inductive), by splitting the whole citation graph into three independent subgraphs – training, validation and test graphs.
 Our preprocessed datasets are chunked to 500 words, for full document you can retrieve them from the whole dataset by `paper_id`
 
