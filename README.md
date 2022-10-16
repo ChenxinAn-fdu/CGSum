@@ -43,9 +43,9 @@ SSN [transductive](https://pan.baidu.com/s/1JBqlX6gmOerI1xaW2RSgiA) 提取码 17
 - [pyrouge](https://github.com/bheinzerling/pyrouge) 0.1.3
 - [fastNLP](https://github.com/fastnlp/fastNLP.git) 0.5.0+
 
-#### ROUGE Installation
+#### PYROUGE Installation
 
-we recommend using the following commands to install the ROUGE environment:
+we recommend using the following commands to install the PYROUGE environment:
 
 ```shell
 sudo apt-get install libxml-perl libxml-dom-perl
