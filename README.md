@@ -2,6 +2,28 @@
 
 code and dataset for AAAI 2021 paper: [Enhancing Scientific Papers Summarization with Citation Graph ](https://arxiv.org/pdf/2104.03057.pdf)
 
+-----
+#### PYROUGE Installation
+
+we recommend using the following commands to install the PYROUGE environment:
+
+```shell
+sudo apt-get install libxml-perl libxml-dom-perl
+pip install git+git://github.com/bheinzerling/pyrouge
+export PYROUGE_HOME_DIR=the/path/to/RELEASE-1.5.5
+pyrouge_set_rouge_path $PYROUGE_HOME_DIR
+chmod +x $PYROUGE_HOME_DIR/ROUGE-1.5.5.pl
+```
+
+You can refer to https://github.com/andersjo/pyrouge/tree/master/tools/ROUGE-1.5.5 for RELEASE-1.5.5 and remember to build Wordnet 2.0 instead of 1.6 in RELEASE-1.5.5/data\
+
+```shell
+cd $PYROUGE_HOME_DIR/data/WordNet-2.0-Exceptions/
+./buildExeptionDB.pl . exc WordNet-2.0.exc.db
+cd ../
+ln -s WordNet-2.0-Exceptions/WordNet-2.0.exc.db WordNet-2.0.exc.db
+```
+-----
 
 ### DataSet SSN
 
@@ -42,27 +64,6 @@ SSN [transductive](https://pan.baidu.com/s/1JBqlX6gmOerI1xaW2RSgiA) 提取码 17
 - [rouge](https://github.com/pltrdy/rouge) 1.0.0
 - [pyrouge](https://github.com/bheinzerling/pyrouge) 0.1.3
 - [fastNLP](https://github.com/fastnlp/fastNLP.git) 0.5.0+
-
-#### PYROUGE Installation
-
-we recommend using the following commands to install the PYROUGE environment:
-
-```shell
-sudo apt-get install libxml-perl libxml-dom-perl
-pip install git+git://github.com/bheinzerling/pyrouge
-export PYROUGE_HOME_DIR=the/path/to/RELEASE-1.5.5
-pyrouge_set_rouge_path $PYROUGE_HOME_DIR
-chmod +x $PYROUGE_HOME_DIR/ROUGE-1.5.5.pl
-```
-
-You can refer to https://github.com/andersjo/pyrouge/tree/master/tools/ROUGE-1.5.5 for RELEASE-1.5.5 and remember to build Wordnet 2.0 instead of 1.6 in RELEASE-1.5.5/data\
-
-```shell
-cd $PYROUGE_HOME_DIR/data/WordNet-2.0-Exceptions/
-./buildExeptionDB.pl . exc WordNet-2.0.exc.db
-cd ../
-ln -s WordNet-2.0-Exceptions/WordNet-2.0.exc.db WordNet-2.0.exc.db
-```
 
 ### Train and Test
 
